@@ -1,0 +1,142 @@
+<div class="flex-container">
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>React JS</span>
+<code class="language-js">
+//React is a javascript library to create 
+interactive websites. SPA - web apps.
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Dynamic Value - inside a template</span>
+<code class="language-js">
+function App() {
+const title = "New title"
+return ( 
+&lt;div&gt;
+ &lt;h1&gt;{ title } &lt;/h1&gt;
+ &lt;h1&gt;Hello World &lt;/h1&gt;
+ &lt;h1&gt; [1,2,3,4,5]  &lt;/h1&gt;
+ &lt;h1&gt;{ Math.random() * 10 } &lt;/h1&gt;
+ &lt;/div&gt;)}
+export default App;
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Stateless Function Component</span>
+<code class="language-js">
+import React from 'react'
+const App = () => {
+    return (
+    )}
+export default App
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Event Handlers</span>
+<code class="language-js">
+function app() {
+  handleClick = () => {
+    console.log("object");
+  };
+  return (
+    &lt;div&gt;
+      &lt;button onClick={handleClick}&gt;&lt;/button&gt;
+      &lt;button onClick={() => handleClick('parameter', e)}&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Props - pass data from parent to child</span>
+<code class="language-js">
+    handleClick = () => console.log()
+&lt;blogs data={blogsdata} title={'All blogs'} 
+handleclick={handleClick}/&gt;
+
+function Blogs = ({data, title, handleclick}) => {
+    return (
+        &lt;div&gt;
+            &lt;p&gt;{title}&lt;/p&gt;
+            &lt;p&gt;{data}&lt;/p&gt;
+            &lt;button onClick={handleclick('1')}/&gt;
+        &lt;/div&gt;
+    )
+}
+export default Blogs
+
+
+</code>
+</pre>
+  </div>
+
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Conditional Templates</span>
+<code class="language-js">
+//Runs only when first condition is true
+{Blogs && &lt;Blogs data={data}&gt;}
+{isPending ? &lt;p&gt;yes&lt;/p&gt; : &lt;p&gt;no&lt;/p&gt;}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Error Handling</span>
+<code class="language-js">
+useEffect(() => {
+    fetch('localhost/users').then(res => {
+      if(!res.ok){
+        throw new Error ('New error')
+      }
+      return res.json()
+    })
+    .then(data => {
+      setData(data)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}, [])
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>React Router</span>
+<code class="language-js">
+import { BrowserRouter as Router, Route, 
+Switch, NavLink, Link } from 'react-router-dom'
+//Switch shows only one component at once.
+//NavLink sets active class on click
+//Link doesn't refresh the page
+&lt;Router&gt;
+  &lt;div className="navbar"&gt;
+    &lt;Switch&gt;
+      &lt;Route path="/"&gt; &lt;Home /&gt; &lt;/Route&gt;
+      &lt;Route path="/about"&gt; &lt;About /&gt; &lt;/Route&gt;
+      &lt;Route path="/*"&gt; &lt;Notfound /&gt; &lt;/Route&gt;
+    &lt;/Switch&gt;
+  &lt;/div&gt;
+&lt;/Router&gt;
+</code>
+</pre>
+  </div>
+</div>

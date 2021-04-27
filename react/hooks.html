@@ -1,0 +1,107 @@
+<div class="flex-container">
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>useState - reactive values (any datatype),</span>
+<code class="language-js">
+// State for the component
+import React, { useState } from "react";
+function app() {
+  const [name, setName] = useState("Prashanth");
+  handleClick = () => {
+    setName("Srikanth");
+  };
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{name}&lt;/p&gt;
+      &lt;button onClick={handleClick}&gt;Click&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+export default app;
+
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>useEffect - runs on every render.</span>
+<code class="language-js">
+//useEffect runs on every render.
+//Just like component did mount.
+
+import {useEffect} from 'react'
+let name = 'hello'
+useEffect(() => {
+    console.log('Hello')
+}, []);
+
+//Second empty parameter to run the useeffect only once.
+[name] = > Runs on change of variable.
+useEffect(() => {
+    console.log('Hello')
+}, [name]);
+
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>useRef</span>
+<code class="language-js">
+//useRef he useRef Hook allows us to create 
+//mutable variables in functional components.
+
+function TextInputWithFocusButton() {
+  const inputEl = useRef(null);
+  const onButtonClick = () => {
+    // `current` points to the mounted text input element
+    inputEl.current.focus();
+  };
+  return (
+    &lt;&gt;
+      &lt;input ref={inputEl} type="text" /&gt;
+      &lt;button onClick={onButtonClick}&gt;Focus the input&lt;/button&gt;
+    &lt;/&gt;
+  );
+}
+
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>useParam - to access attributes of an url</span>
+<code class="language-js">
+import React, { useParams } from 'react-router-dom'
+const Blogdetails = () => {
+  const { id } = useParams()
+  return (
+    &lt;div&gt; className="blog-details"&gt;
+      &lt;h2&gt; Blog details : {id} &lt;/h2&gt;
+    &lt;/div&gt;
+  )
+}
+export default Blogdetails;
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>useHistory - to access history</span>
+<code class="language-js">
+import React, { useHistory } from 'react-router-dom'
+const goback = () => {
+  const history = useHistory()
+  history.go(-1)
+  history.push('/home');
+}
+export default goback;
+</code>
+</pre>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<div class="flex-container">
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Functions</span>
+<code class="language-js">
+//Functions - 
+Set of statements which perform tasks
+//Argument - 
+Is the actual values you pass to the parameter. 
+//Parameter - 
+Which accepts a value
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Functions</span>
+<code class="language-js">
+2 Types of Functions
+//Function Declaration
+function trimString(string){
+    return string.trim();
+}
+trimString('   Hello   ');
+//Function Expression
+let hello = function(string){
+    return string.trim();
+}
+hello()
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Factory Function </span>
+<code class="language-js">
+function trimString(string){
+    return string.trim();
+}
+const aftertrim = 
+trimString('   Hello world      ')
+console.log(aftertrim)
+
+Camel Notation : oneTwoThree (functions)
+Pascal Notation : OneTwoThree (classess)
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Constructor Function</span>
+<code class="language-js">
+function TrimString(string){
+    this.string = string;
+    this.do = function(){
+        return this.string.trim()
+    }
+}
+const a = new TrimString('    Hello    ');
+a.do()
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Function Composition</span>
+<code class="language-js">
+const input = "      Prashanth B R    ";
+const trim = (str) => str.trim();
+const wrapdiv = (str) => `<div>${str}</div>`;
+const lowercase = (str) => str.toLowerCase();
+
+const result = wrapdiv(lowercase(trim(input)));
+console.log(result);
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>lodash - compose and pipe</span>
+<code class="language-js">
+import { compose, pipe } from "lodash/fp";
+
+const input = "      Prashanth B R    ";
+const trim = (str) => str.trim();
+const wrapdiv = (str) => `<div>${str}</div>`;
+const lowercase = (str) => str.toLowerCase();
+
+const transform = pipe(trim, lowercase, wrapdiv);
+const transform = compose(wrapdiv, lowercase, trim);
+transform(input);
+
+</code>
+</pre>
+  </div>
+</div>

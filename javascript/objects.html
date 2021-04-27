@@ -1,0 +1,63 @@
+<div class="flex-container">
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Objects</span>
+<code class="language-js">
+//Objects -  
+just like real word objects, 
+an object as properties and methods.
+//Object literal - {}
+//Object Notations :
+Dot Notation	Person.name
+Bracket Notation	Person[‘name’]
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Dynamic Object</span>
+<code class="language-js">
+const circle = {
+    radius : 1
+}
+circle.color = "Yellow";
+circle.draw = function() {}
+delete circle.color;
+console.log(circle)
+//Primitives are copied by values
+//Objects are copied by their reference
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Enumerating properties</span>
+<code class="language-js">
+const circle = {
+    radius : 1,
+    draw : function(){
+    }}
+for(let key in circle)
+    console.log(key, circle[key])
+for (let key of Object.keys(circle))
+    console.log(key)
+for (let entries of Object.entries(circle))
+    console.log(entries)
+if(‘radius’ in circle) console.log(‘Yes’)
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Object Cloning</span>
+<code class="language-js">
+const another = Object.assign({}, circle);
+const another = { …circle };
+</code>
+</pre>
+  </div>
+</div>

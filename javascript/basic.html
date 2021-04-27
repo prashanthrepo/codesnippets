@@ -1,0 +1,201 @@
+<div class="flex-container">
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Javascript</span>
+<code class="language-js">
+//ECMAscript is a specification 
+//Javascript is the programming language.
+//Dynamic Typing : 
+The variables declared and assigned 
+change the values to any type.
+//Hoisting - 
+Moving function declarations to the top automatically
+//Mutable - data types are the objects that can be modified and altered
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Primitive Types : Literals</span>
+<code class="language-js">
+String typeof ‘string’
+Number typeof ‘number’
+Boolean	typeof ‘boolean’
+undefined typeof ‘undefined’
+null typeof ‘object’
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Non-Primitive Types</span>
+<code class="language-js">
+//Non-Primitive Types (or) 
+//Reference Types : Literals
+objects	
+arrays	
+functions	
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Operators</span>
+<code class="language-js">
+Arithmetic (+ , - , * , / , % , ** , — , ++ )
+Assignment (= , += , *= etc)
+Comparison (Relational Operators > , >= , < , <=) 
+           (Equality Operators === , !==)
+Ternary Operators (points > 100 ? ’gold’ : ‘silver’)
+Logical (AND && , OR || , NOT !)
+Logical non-boolean - falsy 
+(undefined, null, 0 , ‘’ , NaN, false)
+Logical non-boolean - truthy (‘Mosh’, 1)
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Arguments</span>
+<code class="language-js">
+//arguments are objects
+function sum(a){
+    let total = 0;
+    for (let num of arguments) {
+        total += num;
+    }
+    console.log(total)
+    }
+sum(1,2,3,4,5)
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Rest Operator</span>
+<code class="language-js">
+//Spreads all args only for 
+function argument Rest Operator should 
+always be a last argument
+function sum(...args){
+    return args.reduce((a,b) => a + b);
+}
+console.log(sum(1,2,3,4,5))
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Default parameters</span>
+<code class="language-js">
+function interest(amount, rate = 3, years) {
+    return amount * rate / 100 *years
+}
+interest(10000,undefined,2)
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Call, apply and bind</span>
+<code class="language-js">
+//Change the value of this 
+//by default this refers to window obj
+//this will be a first argument
+function playVideo(a,b){
+    console.log(this)
+}
+playVideo(); => returns undefined/window obj
+//Accepts parameters
+playVideo.call({name : "Rash"},1,2) 
+//Accepts an array has parameters
+playVideo.apply({name : "Rash"},['sa','yy']) 
+// Copy of the function to a variable
+playVideo.bind({name : "Rash"})() 
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Getter and Setters</span>
+<code class="language-js">
+//Getters and setters allow you to define Object Accessors
+const person = {
+    firstName : 'Prashanth',
+    lastName : 'BR',
+    get fullname() {
+        return (`${person.firstName} ${person.lastName}`)
+    },
+    set fullName(value){
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+}
+person.fullName = 'Rashmi Seeti';
+console.log(person.fullname)
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Try and Catch</span>
+<code class="language-js">
+const person = {
+    firstName : 'Prashanth',
+    lastName : 'BR',
+    get fullname() {
+        return (`${person.firstName} ${person.lastName}`)
+    },
+    set fullName(value){
+        if(typeof value !== 'string')
+            throw new Error('This is not a String')
+        const parts = value.split(' ');
+        if(parts.length !== 2)
+            throw new Error("Enter first and last name")
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }}
+try {
+    person.fullName = 'a b';
+} catch(e) {
+    console.log(e)}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>This</span>
+<code class="language-js">
+//object that is excecuting the current function.
+//this inside a method -> Object
+//this inside a function -> Global
+const video = {
+    title : 'Movie',
+    tags : ['a','b','c'],
+    splitTitle(){
+        this.tags.forEach((tag) => {
+            console.log(this, tag)
+        }, this);
+    } }
+console.log(video.splitTitle())
+function PlayVideo(title){
+    this.title = title;
+    console.log(this.title) }
+const newmovie = new PlayVideo('Orange');
+//console.log(newmovie)
+</code>
+</pre>
+  </div>
+</div>
