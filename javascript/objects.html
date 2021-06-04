@@ -60,7 +60,6 @@ const another = { …circle };
 </code>
 </pre>
   </div>
-</div>
   <!------------------------------------------------------->
   <div class="js">
     <pre>
@@ -71,6 +70,18 @@ objArray.sort(function(a, b) {
   var textB = b.DepartmentName.toUpperCase();
   return (textA < textB) ? -1 : (textA> textB) ? 1 : 0;
   });
+</code>
+</pre>
+  </div>
+    <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Object Sorting</span>
+<code class="language-js">
+function sortItems(data){
+let sortitemsbyprice = data.sort((a,b) => b.price - a.price )
+}
+sortItems(data)
 </code>
 </pre>
   </div>
