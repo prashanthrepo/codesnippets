@@ -1,0 +1,119 @@
+<div class="flex-container">
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>GIT</span>
+<code class="language-html">
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin
+https://github.com/prashanthrepo/dentalnew.git
+git push -u origin main
+
+1. before start working always pull the 
+latest changes from the remote repo
+	> git pull
+2. make the code changes
+3. find all the file modified
+	> git status
+4. add all the files to staging area
+	> git add .
+5. commit the file changes with a message
+	> git commit -m "commit_message"
+6. push the changes to remote repo
+	> git push
+
+
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>All Commands</span>
+<code class="language-css">
+# make directory a git repository
+$ git init
+
+# To add all files not staged:
+$ git add .
+
+# To stage a specific file:
+$ git add index.html
+
+# To stage an entire directory:
+$ git add css
+
+# Adding a commit with message
+$ git commit -m "Commit message in quotes"
+
+$ git status
+
+# Running git config globally
+$ git config --global user.email "my@emailaddress.com"
+$ git config --global user.name "Brian Kerr"
+
+# Create a new branch
+$ git branch &lt;branch_name&gt;
+
+# List all remote or local branches
+$ git branch -a
+
+# Delete a branch
+$ git branch -d &lt;branch_name&gt;
+
+# Checkout an existing branch
+$ git checkout &lt;branch_name&gt;
+
+# Checkout and create a new branch with that name
+$ git checkout -b &lt;new_branch&gt;
+
+# Merge changes into current branch
+$ git merge &lt;branch_name&gt;
+
+# Adding a remote repository with the name of beanstalk
+$ git remote add origin git@account_name.
+git.beanstalkapp.com:/acccount_name/repository_name.git
+
+$ git clone &lt;remote_URL&gt;
+
+$ git pull &lt;branch_name&gt; &lt;remote_URL/remote_name&gt;
+
+$ git push &lt;remote_URL/remote_name&gt; &lt;branch>
+
+# Push all local branches to remote repository
+$ git push —all
+</code>
+</pre>
+  </div>
+
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>GIT Remove</span>
+<code class="language-css">
+# To remove a file from the working index:
+$ git rm --cached css/style.css
+rm 'css/style.css'
+
+# To delete a file (force):
+$ git rm -f css/style.css
+rm 'css/style.css'
+
+# To remove an entire directory from 
+the working index (cached):
+$ git rm -r --cached css/
+rm 'css/style.css'
+rm 'css/style.min.css'
+
+# To delete an entire directory (force):
+$ git rm -r -f css/
+rm 'css/style.css'
+rm 'css/style.min.css'
+
+</code>
+</pre>
+  </div>
+</div>

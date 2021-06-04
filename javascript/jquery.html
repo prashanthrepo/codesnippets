@@ -1,0 +1,174 @@
+<div class="flex-container">
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>jQuery</span>
+<code class="language-js">
+// jQuery is a JavaScript Library. 
+//jQuery greatly simplifies JavaScript programming. 
+//The purpose of jQuery is to make it much 
+//easier to use JavaScript on your website.
+$("*")
+$(this)
+$("p.intro")
+$("p:first")
+$("ul li:first")
+$("ul li:first-child")
+$("[href]")
+$("a[target='_blank']")
+$(":button")
+$("tr:even")
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Events </span>
+<div class="normaltext">
+<table class="table table-sm">//All the different visitors' actions that
+//a web page can respond to are called events.
+    <tr>
+        <td>Mouse Events </td>
+        <td>Keyboard Events </td>
+        <td>Form Events </td>
+        <td>Document/Window  </td>
+      </tr>
+      <tr>
+        <td>click</td>
+        <td>keypress</td>
+        <td>submit</td>
+        <td>load</td>
+      </tr>
+      <tr>
+        <td>dblclick</td>
+        <td>keydown</td>
+        <td>change</td>
+        <td>resize</td>
+      </tr>
+      <tr>
+        <td>mouseenter</td>
+        <td>keyup</td>
+        <td>focus/blur</td>
+        <td>scroll</td>
+    </tr>
+</table>
+</div>
+</pre>
+  </div>
+
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Methods - to access history</span>
+<code class="language-js">
+fadeIn(3000)
+fadeToggle()
+fadeTo()
+slideUp()
+slideToggle()
+siblings()
+next()prev()
+prevAll()
+prevUntil()
+parent() 
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>.On method</span>
+<code class="language-js">
+//one or more events to the selected elements.
+$( "div.test" ).on({
+  click: function() {
+    $( this ).toggleClass( "active" );
+  }, mouseenter: function() {
+    $( this ).addClass( "inside" );
+  }, mouseleave: function() {
+    $( this ).removeClass( "inside" );
+  }
+});
+</code>
+</pre>
+  </div>
+
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Animate with css</span>
+<code class="language-js">
+$("button").click(function(){ 
+   $("div").animate({ 
+     left: '250px', 
+     opacity: '0.5', 
+     height: '150px', 
+     width: '150px' 
+   }); 
+});   
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Methods</span>
+<code class="language-js">
+append() - Inserts content at the end 
+of the selected elements
+after() - Inserts content after 
+the selected elements
+addClass() - Adds one or more classes 
+to the selected elements
+removeClass() - Removes one or more classes 
+from the selected elements
+toggleClass() - Toggles between adding/removing 
+classes from the selected elements
+css() - $("p").css({"background-color": "yellow", "font-size": "200%"});
+The noConflict() method releases the hold on the 
+$ shortcut identifier, so that other scripts can use it. 
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>AJAX</span>
+<code class="language-js">
+//AJAX is the art of exchanging data with a server, and 
+//updating parts of a web page - without reloading the whole page. 
+//The load() method loads data from a server 
+//and puts the returned data into the selected element. 
+$("#div1").load("demo_test.txt"); 
+$("button").click(function(){ 
+   $("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){ 
+     if(statusTxt == "success") 
+       alert("External content loaded successfully!"); 
+     if(statusTxt == "error") 
+       alert("Error: " + xhr.status + ": " + xhr.statusText); 
+   }); 
+}); 
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>AJAX</span>
+<code class="language-js">
+$.ajax({
+url : "getCountriesCredMap",
+type : "GET",
+data: {},
+async : false,
+contentType : "text/plain",
+success : function(data) {
+},
+error : function(e) {
+},
+}); 
+</code>
+</pre>
+  </div>
+</div>

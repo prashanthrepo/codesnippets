@@ -1,53 +1,136 @@
 const itemList = [
   {
+    name: "HTML",
+    path: "/htmlcss/html.html",
+    class: "active",
+  },
+  {
+    name: "CSS",
+    path: "/htmlcss/css.html",
+  },
+  {
     name: "Javascript",
     path: "/javascript/basic.html",
-    hash: "item001",
-    class: "active",
+  },
+  {
+    name: "ES6",
+    path: "/javascript/basic.html",
   },
   {
     name: "Loops",
     path: "/javascript/loops.html",
-    hash: "item002",
   },
   {
     name: "Arrays",
     path: "/javascript/arrays.html",
-    hash: "item003",
   },
   {
     name: "Functions",
     path: "/javascript/functions.html",
-    hash: "item004",
   },
   {
     name: "Objects",
     path: "/javascript/objects.html",
-    hash: "item005",
   },
   {
     name: "Challenges",
     path: "/javascript/codingchallange.html",
-    hash: "item006",
   },
   {
     name: "React JS",
     path: "/react/basics.html",
-    hash: "item007",
   },
   {
     name: "Hooks",
     path: "/react/hooks.html",
-    hash: "item008",
   },
   {
     name: "Redux",
     path: "/react/redux.html",
-    hash: "item009",
+  },
+  {
+    name: "Context API",
+    path: "/react/redux.html",
+  },
+  {
+    name: "jQuery",
+    path: "/javascript/jquery.html",
+  },
+  {
+    name: "SCSS",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Webpack",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Git",
+    path: "/common/git.html",
+  },
+  {
+    name: "Typescript",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Flexbox",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Jest",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Next JS",
+    path: "/css/scss.html",
+  },
+  {
+    name: "HTTP Protocols",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Web Sockets",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Node JS",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Express JS",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Babel",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Mongo DB",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Lodash",
+    path: "/css/scss.html",
+  },
+  {
+    name: "Tailwind CSS",
+    path: "/css/tailwind.html",
+  },
+  {
+    name: "Bootstrap",
+    path: "/css/scss.html",
+  },
+  {
+    name: "WebComponent",
+    path: "/css/scss.html",
   },
 ];
 
 $(document).ready(function () {
+  itemList.map((item) => {
+    const newnumber = Math.floor(Math.random() * 90000) + 10000;
+    item.hash = "hash" + newnumber.toString();
+  });
   itemList.forEach((item) => {
     var tabshtml = '<button class="nav-link ' + item.class + '" id="' + item.hash + '-tab" data-bs-toggle="pill" data-bs-target="#' + item.hash + '" type="button"' + 'role="tab" aria-controls="' + item.hash + '" aria-selected="true"> ' + item.name + " </button>";
     document.getElementById("v-pills-tab").innerHTML += tabshtml;

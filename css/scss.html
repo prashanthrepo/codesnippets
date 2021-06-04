@@ -1,0 +1,123 @@
+<div class="flex-container">
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>SASS - Syntactically Awesome Style Sheets</span>
+<code class="language-css">
+//SASS - CSS with superpowers.  
+//npm install node-sass 
+//sass --watch input.scss output.css 
+//sass --watch app/sass:public/stylesheets 
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Variables</span>
+<code class="language-css">
+// Variables are a way to store information
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Nesting -follows the same visual hierarchy of your HTML</span>
+<code class="language-css">
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li { display: inline-block; }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Modules</span>
+<code class="language-css">
+//You can split into mutiple files and @use rule. 
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+---------
+@use 'base';
+.inverse {
+  background-color: base.$primary-color;
+  color: white;
+}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Mixins</span>
+<code class="language-css">
+//Mixins - groups of CSS declarations that 
+//you want to reuse throughout your site
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+.box { @include transform(rotate(30deg)); }
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Extend/Inheritance</span>
+<code class="language-css">
+//Using @extend lets you share a set of 
+//CSS properties from one selector to another.
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Operators</span>
+<code class="language-css">
+//standard math operators like +, -, *, /, and %.
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+</code>
+</pre>
+  </div>
+</div>

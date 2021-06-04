@@ -1,0 +1,102 @@
+<div class="flex-container">
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Tailwind CSS</span>
+<code class="language-css">
+//A utility-first CSS framework packed with classes
+//npm install tailwindcss
+
+//Package.json
+"scripts": {
+    "dev": "postcss build src/styles.css -o public/styles.css"
+    "prod": "cross-env NODE_ENV=production postcss build src/styles.css -o public/styles.css"
+},
+
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Style.css</span>
+<code class="language-css">
+@import url('');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.card{
+  @apply rounded bg-white border-gray-200 shadow-md relative;
+}
+.badge{
+  @apply absolute top-0 ml-2 p-2 mt-2 bg-secondary-100 ;
+}
+.btn{
+  @apply rounded-full py-2 px-3 uppercase text-xs cursor-pointer;
+}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Building Tailwind with PostCSS</span>
+<code class="language-css">
+https://www.youtube.com/watch?v=ieObfhXqJtc
+
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+// postcss.config.js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+
+npx tailwindcss init
+
+// tailwind.config.js
+module.exports = {
+  purge: [
+   './src/**/*.html',
+    './src/**/*.js',
+  ],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+}
+</code>
+</pre>
+  </div>
+
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>tailwind.config.js</span>
+<code class="language-css">
+module.exports = {
+  purge: [],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#FF6363',
+        secondary: {
+          100: '#E2E2D5',
+          200: '#888883',
+        }
+      },
+    },
+  },
+  variants: {},
+  plugins: [],
+}
+
+</code>
+</pre>
+  </div>
+</div>
