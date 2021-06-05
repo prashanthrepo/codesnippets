@@ -4,8 +4,107 @@
     <pre>
 <span>React JS</span>
 <code class="language-js">
-//React is a javascript library to create 
-interactive websites. SPA - web apps.
+React is a JavaScript library for building user interfaces. 
+React is used to build SPA single page applications.
+React creates a VIRTUAL DOM in memory instead of Real DOM. 
+React only changes what needs to be changed!
+Install - npx create-react-app myfirstreact | 
+cd myfirstreact | npm start
+
+Lifecycle of Components
+Each component in React has a lifecycle which you can 
+monitor and manipulate during its three main phases.
+The three phases are: Mounting, Updating, and Unmounting.
+
+Mounting - means putting elements into the DOM.
+constructor()
+getDerivedStateFromProps()
+render()
+componentDidMount()
+
+Updateing
+A component is updated whenever there is a change in the 
+component's state or props.
+render()
+componentDidUpdate()
+shouldComponentUpdate()
+
+Unmounting - next phase in the lifecycle is when a component 
+is removed from the DOM
+componentWillUnmount()
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Dynamic Value - inside a template</span>
+<code class="language-js">
+Components are like functions that return HTML elements.
+Classes are a template for creating objects. They encapsulate data with code to work on that data.
+import React from 'react';
+import ReactDOM from 'react-dom'; --> ReactDOM is a package that provides DOM specific methods , managing DOM elements(render())
+class hello extends React.PureComponent { -> doesn't re-renders when state/props as been updated with same values. shouldComponentUp
+  constructor(props) { -> props are like function arguments, and you send them into the component as attributes.
+    super(props); -> super by calling this it has access to the constructor
+    this.state = {-> state components has a built-in state object. state object changes, the component re-renders.
+      kAcctLimit: 0,};
+      this.shoot =this.shoot.bind(this);  -> bind binds this function with constructor properties using this keyword.
+    }
+  shoot = () => {}
+  componentDidMount(){} - ->is a hook that gets invoked right after a React component has been first render().
+  render() { --> view to be rendered to the browser window.
+    const { kAcctDetails} = this.props;
+    const mystyle = {color: "white"};
+return (
+&lt;div style={mystyle}&gt;
+  &lt;button onClick={this.shoot} style={{color: "red" }}&gt;Take the Shot!&lt;/button&gt;
+  &lt;div msg.length&gt; 0 && !isLogin ? &lt;h2&gt; {msg.length}&lt;/h2&gt; : &lt;h2&gt;no messages.&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/div&gt;)
+}}
+export default hello; --> expose the component to other modules.
+ReactDOM.render(
+&lt;hello /&gt;, document.getElementById('my'))
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>React</span>
+<code class="language-js">
+callback function as an argument of setState()
+Since setState() is asynchronous the callback function is used for any post action.
+React.createElement()- const title = React.createElement('h1', {}, 'My First React Code');
+higher-order component (HOC) is a function that takes a component and returns a new component. const EnhancedComponent =
+higherOrderComponent(WrappedComponent)
+Reconciliation - When a component's props or state change, React decides whether an actual DOM update is necessary by
+comparing the newly returned element with the previously rendered one. When they are not equal, React will update the
+DOM. This process is called reconciliation.
+Synthetic events combine the response of different browser's native events into one API, ensuring that the events are
+consistent across different browsers.
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Axios get and post</span>
+<code class="language-js">
+componentDidMount() { 
+  axios.get(`https://jsonplaceholder.typicode.com/users`)
+  .then(res => {
+  const persons = res.data;
+  this.setState({ persons });
+}) }
+const user = { name: this.state.name}; 
+  axios.post(`https://jsonplaceholder.typicode.com/users`, 
+  { user }) 
+  .then(res => {
+  console.log(res);
+  console.log(res.data);
+})
 </code>
 </pre>
   </div>
@@ -56,6 +155,20 @@ function app() {
       &lt;/button&gt;
     &lt;/div&gt;
   );}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js">
+    <pre>
+<span>Lists</span>
+<code class="language-js">
+render() {
+const data =[{"name":"test1"},{"name":"test2"}];
+const listItems = data.map((d) =>
+&lt;li key={d.name}&gt;{d.name}&lt;/li&gt;
+);
+return ( &lt;div&gt; {listItems } &lt;/div&gt; ); }
 </code>
 </pre>
   </div>

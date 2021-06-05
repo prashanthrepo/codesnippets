@@ -1,5 +1,13 @@
 const itemList = [
   {
+    name: "Wordpress",
+    path: "/common/index.html",
+  },
+  {
+    name: "Web",
+    path: "/common/web.html",
+  },
+  {
     name: "HTML",
     path: "/htmlcss/html.html",
     class: "active",
@@ -11,6 +19,14 @@ const itemList = [
   {
     name: "Javascript",
     path: "/javascript/basic.html",
+  },
+  {
+    name: "AJAX",
+    path: "/javascript/AJAX.html",
+  },
+  {
+    name: "jQuery",
+    path: "/javascript/jquery.html",
   },
   {
     name: "ES6",
@@ -52,10 +68,7 @@ const itemList = [
     name: "Context API",
     path: "/react/redux.html",
   },
-  {
-    name: "jQuery",
-    path: "/javascript/jquery.html",
-  },
+
   {
     name: "SCSS",
     path: "/css/scss.html",
