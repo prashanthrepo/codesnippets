@@ -1,9 +1,9 @@
 <div class="flex-container">
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>FIZZBUZZ</span>
-<code class="language-js">
+<code class="searchcode language-js">
 const output = callfizzbuzz(16);
 console.log(output);
 function callfizzbuzz(input) {
@@ -17,6 +17,73 @@ if(input % 5 === 0)
     return 'Buzz'
 return input
 }
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Check if anagrams/ same names</span>
+<code class="searchcode language-js">
+var firstWord = "Mary";
+var secondWord = "Army";
+isAnagram(firstWord, secondWord);
+function isAnagram(first, second) {
+    var a = first.toLowerCase();
+    var b = second.toLowerCase();
+    a = a.split("").sort().join("");
+    b = b.split("").sort().join("");
+return a === b;}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Convert String and sum the values</span>
+<code class="searchcode language-js">
+var str = "123456789";
+var hello = str.split('');
+var parse = hello.map(function(item){
+    return parseInt(item)
+})
+var total = parse.reduce(function(a,b){
+    return a+b;
+},0)
+
+console.log(total);
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Javascript Split and reverse string.</span>
+<code class="searchcode language-js">
+str.split('').reverse().join('')
+
+Duplicate an array
+var arr = [1, 2, 3, 4, 5]
+function duplicate(arr) {
+    return {
+        arr.concat(arr);
+    }
+}
+duplicate(arr);
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Remove Duplicates</span>
+<code class="searchcode language-js">
+finalarr = finalarr.filter(
+function( item, index, inputArray ) {
+return inputArray.indexOf(item) == index;
+});
+
+OR let uniqueChars = [...new Set(chars)];
 </code>
 </pre>
   </div>

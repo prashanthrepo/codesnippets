@@ -1,9 +1,9 @@
 <div class="flex-container">
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Redux - Central data store</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //Install - npm i redux react-redux
 //Redux is central data store for all of the application data
 //Any component can access data from this store.
@@ -13,10 +13,10 @@
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Import Redux in index.js (root)</span>
-<code class="language-js">
+<code class="searchcode language-js">
 import { createStore } from 'redux'
 import rootReducer from './path'
 import { Provider } from 'react-redux';
@@ -29,10 +29,10 @@ ReactDOM.render(&lt;Provider store={store}&gt;&lt;App/&gt;
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Reducer - is a function which interacts with the store</span>
-<code class="language-js">
+<code class="searchcode language-js">
 const initState = [{ id: 1, name: 'hello' }]
 const authReducer = (store = initState, action) => {
   return store
@@ -42,10 +42,10 @@ export default authReducer;
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Combine Reducers - combine two reducers into one</span>
-<code class="language-js">
+<code class="searchcode language-js">
 import authReducer from './path'
 import projectReducer from './path'
 import { combineReducers } from 'redux'
@@ -60,10 +60,10 @@ export default rootReducer;
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Connecting component to redux store</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //Connect is higher order component
 import { conenct } from 'react- redux'
 

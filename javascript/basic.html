@@ -1,9 +1,31 @@
 <div class="flex-container">
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Javascript</span>
-<code class="language-js">
+<code class="searchcode language-js">
+JavaScript controls the behavior of web pages. 
+HTML to define the content of web pages, 
+CSS to specify the layout of webpages3.
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
+  Turn on the light</button>
+<button type="button" onclick="document.getElementById('demo')
+.style.fontSize='35px'">Click Me!</button>
+var myElement = document.getElementById("intro");
+var x = document.getElementsByTagName("p");
+var x = document.getElementsByClassName("intro");
+var x = document.querySelectorAll("p.intro");
+document.createElement(element)
+document.getElementById("p2").style.color = "blue";
+Output - innerHTML, document.write(), window.alert(), console.log()
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Javascript</span>
+<code class="searchcode language-js">
 //ECMAscript is a specification 
 //Javascript is the programming language.
 //Dynamic Typing : 
@@ -18,10 +40,62 @@ that can be modified and altered
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
+    <pre>
+<span>Data structures</span>
+<code class="searchcode language-js">
+Data structures are techniques for storing and 
+organizing data that make it easier to modify,
+navigate, and access.
+
+1) Array
+2) Queues
+3) Linked List
+4) Trees
+5) Graphs
+6) Hash Tables (Map)
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Basic</span>
+<code class="searchcode language-js">
+Global Scope - Variables declared Globally (outside any function) have Global Scope 
+Function Scope - Variables declared Locally (inside a function) have Function Scope.
+Hoisting - You can use the variable before it is declared. JavaScript's default behavior 
+of moving declarations to the top.
+undefined and null are equal in value but different in type (null is an object)
+Variables - are containers for storing data values.
+Const - behave like let variables, except they cannot be reassigned
+Identifiers - are used to name variables, functions. And should be unique.
+Statements - is a list of "instructions" to be "executed" by a computer.
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>OOPS</span>
+<code class="searchcode language-js">
+OOPS - is a programming model that relies on the concept of 
+classes and objects.
+Inheritance – inheriting properties of one class to other.
+Encapsulation is the bundling of data and the methods, that data is 
+restricted from outside the bundle
+Polymorphism is the ability to create a variable, a function, or an 
+object that has more than one form.
+Abstraction is a way of hiding the implementation details and showing 
+only the functionality to the users.
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
     <pre>
 <span>ES6</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //Variables - Let,const
 //Rest and Spread
 //Destructuring
@@ -36,10 +110,50 @@ pairs of the object passed
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
+    <pre>
+<span>Classes</span>
+<code class="searchcode language-js">
+Classes - Classes are a template for creating objects. 
+They encapsulate data with code. Class is not an object.
+Constructors is object of that class. 
+Holds the properties of that class.
+class User { 
+  constructor(name) {
+  this.name = name; 
+}
+sayHi() {
+alert(this.name)}}
+let user = new User("John");
+user.sayHi();
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Closure</span>
+<code class="searchcode language-js">
+Closure? - where an inner function has access to the 
+outer (enclosing) function’s variables — a scope chain.
+it has access to its own scope
+it has access to the outer function’s variables
+it has access to the global variables
+function outer() { 
+  var b = 10;
+  function inner() {
+  var a = 20;
+  console.log(a+b);
+}
+return inner;}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
     <pre>
 <span>Primitive Types : Literals</span>
-<code class="language-js">
+<code class="searchcode language-js">
 String typeof ‘string’
 Number typeof ‘number’
 Boolean	typeof ‘boolean’
@@ -49,10 +163,10 @@ null typeof ‘object’
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Non-Primitive Types</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //Non-Primitive Types (or) 
 //Reference Types : Literals
 objects	
@@ -62,10 +176,33 @@ functions
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
+    <pre>
+<span>window load, document load, document ready</span>
+<code class="searchcode language-js">
+Window.load - entire page loads, including its content 
+(images, CSS, scripts, etc.).
+window.onload = function () {
+  alert('loaded')
+};
+
+document.onload - prior to images and other external 
+content is loaded.
+document.onload = function () {
+alert('loaded')
+};
+
+$(document).ready(function() { /* code here */ });
+$(function() { /* code here */ });
+
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
     <pre>
 <span>Operators</span>
-<code class="language-js">
+<code class="searchcode language-js">
 Arithmetic (+ , - , * , / , % , ** , — , ++ )
 Assignment (= , += , *= etc)
 Comparison (Relational Operators > , >= , < , <=) 
@@ -79,10 +216,10 @@ Logical non-boolean - truthy (‘Mosh’, 1)
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Arguments</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //arguments are objects
 function sum(a){
     let total = 0;
@@ -96,10 +233,25 @@ sum(1,2,3,4,5)
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
+    <pre>
+<span>Speard Operator</span>
+<code class="searchcode language-js">
+Spread operator - It takes in anarray and expands it 
+into individual elements. 
+Var a = [1,2] var b = [...a, 3,4]
+Or 
+function hello(a.b) {
+Console.log(a+b) }
+Hello(...a)
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
     <pre>
 <span>Rest Operator</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //Spreads all args only for 
 function argument Rest Operator should 
 always be a last argument
@@ -111,10 +263,10 @@ console.log(sum(1,2,3,4,5))
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Default parameters</span>
-<code class="language-js">
+<code class="searchcode language-js">
 function interest(amount, rate = 3, years) {
     return amount * rate / 100 *years
 }
@@ -123,10 +275,92 @@ interest(10000,undefined,2)
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
+    <pre>
+<span>Hoisting</span>
+<code class="searchcode language-js">
+Hoisting - we can move declarations to the top.
+In JavaScript, a variable can be declared 
+after it has been used.
+
+Variables defined with let and const are 
+hoisted to the top of the block
+
+Using a let variable before it is declared 
+will result in a ReferenceError.
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Promise</span>
+<code class="searchcode language-js">
+Promises - A Promise is a JavaScript object that links 
+"Producing Code" and "Consuming Code".
+Promises were introduced to solve the famous callback hell problem
+var a = new Promise((resole,reject) => {
+var b = 1 + 3;
+if(b == 2) {
+  resole('Success');
+} else {
+  reject('Error');}})
+  a.then((message) => {
+  console.log('Then is ' +message);
+}).catch((message) => {
+  console.log('Then is ' +message);
+})
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Await</span>
+<code class="searchcode language-js">
+Await - the calling code will stop until the promise 
+is resolved or rejected.
+const doSomething = async () => { 
+  console.log(await doSomethingAsync())
+}
+const doSomethingAsync = () => {
+  return new Promise(resolve => {
+  setTimeout(() => resolve('I did something'), 3000)
+})}
+const doSomething = async () => {
+  console.log(await doSomethingAsync())
+}
+console.log('Before')
+doSomething()
+console.log('After')
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Async</span>
+<code class="searchcode language-js">
+Async - keyword to any function means that the 
+function will return a promise.
+
+const getFirstUserData = async () => {
+const response = await fetch('/users.json')
+const users = await response.json()
+const user = users[0]
+const userResponse = await fetch(`/users/${user.name}`)
+const userData = await userResponse.json() 
+return userData
+}
+getFirstUserData()
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
     <pre>
 <span>Call, apply and bind</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //Change the value of this 
 //by default this refers to window obj
 //this will be a first argument
@@ -144,10 +378,33 @@ playVideo.bind({name : "Rash"})()
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
+    <pre>
+<span>Fetch</span>
+<code class="searchcode language-js">
+fetch('/data.json')
+  .then(response => response.json())
+  .then(data => {
+  console.log(data.json())
+})
+.catch(err => {})
+
+fetch('/data.json', {
+method: 'post',
+body: JSON.stringify(data),
+headers: {
+'Accept': 'application/json'
+},
+
+})
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
     <pre>
 <span>Getter and Setters</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //Getters and setters allow you to define Object Accessors
 const person = {
     firstName : 'Prashanth',
@@ -167,10 +424,10 @@ console.log(person.fullname)
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Try and Catch</span>
-<code class="language-js">
+<code class="searchcode language-js">
 const person = {
     firstName : 'Prashanth',
     lastName : 'BR',
@@ -194,10 +451,10 @@ try {
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>This</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //object that is excecuting the current function.
 //this inside a method -> Object
 //this inside a function -> Global

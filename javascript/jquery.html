@@ -1,9 +1,9 @@
 <div class="flex-container">
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>jQuery</span>
-<code class="language-js">
+<code class="searchcode language-js">
 // jQuery is a JavaScript Library. 
 //jQuery greatly simplifies JavaScript programming. 
 //The purpose of jQuery is to make it much 
@@ -22,7 +22,7 @@ $("tr:even")
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Events </span>
 <div class="normaltext">
@@ -58,10 +58,10 @@ $("tr:even")
   </div>
 
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Methods - to access history</span>
-<code class="language-js">
+<code class="searchcode language-js">
 fadeIn(3000)
 fadeToggle()
 fadeTo()
@@ -76,10 +76,31 @@ parent()
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
+    <pre>
+<span>Jquery Loaded</span>
+<code class="searchcode language-js">
+window.onload = function() {
+if (window.jQuery) {
+// jQuery is loaded
+alert("Yeah!");
+} else {
+// jQuery is not loaded
+alert("Doesn't Work");
+}
+}
+
+if (typeof jQuery == 'undefined') {
+// jQuery IS NOT loaded, do stuff here.
+}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
     <pre>
 <span>.On method</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //one or more events to the selected elements.
 $( "div.test" ).on({
   click: function() {
@@ -95,10 +116,10 @@ $( "div.test" ).on({
   </div>
 
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Animate with css</span>
-<code class="language-js">
+<code class="searchcode language-js">
 $("button").click(function(){ 
    $("div").animate({ 
      left: '250px', 
@@ -111,10 +132,10 @@ $("button").click(function(){
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Methods</span>
-<code class="language-js">
+<code class="searchcode language-js">
 append() - Inserts content at the end 
 of the selected elements
 after() - Inserts content after 
@@ -132,10 +153,10 @@ $ shortcut identifier, so that other scripts can use it.
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>AJAX</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //AJAX is the art of exchanging data with a server, and 
 //updating parts of a web page - without reloading the whole page. 
 //The load() method loads data from a server 
@@ -153,10 +174,10 @@ $("button").click(function(){
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>AJAX</span>
-<code class="language-js">
+<code class="searchcode language-js">
 $.ajax({
 url : "getCountriesCredMap",
 type : "GET",
@@ -168,6 +189,73 @@ success : function(data) {
 error : function(e) {
 },
 }); 
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Sort - find - addition - filter </span>
+<code class="searchcode language-js">
+        if(typeof jQuery == "undefined"){
+        alert('Jquery Not Installed')
+        }
+        //Ajax call to get products data
+        function getProducts(){
+        $.ajax({
+        url: 'https://fakestoreapi.com/products',
+        type:'GET',
+        success: function(data){
+        console.log(data)
+        //const res = JSON.stringify(data)
+        appendData(data)
+        },
+        error: function(e){
+        console.log(e)
+        }
+        })
+        }
+        getProducts();
+        
+        //Append Product Data
+        function appendData(data){
+        //Filter data - price which is higher than 50
+        const filteredData = data.filter(item => {
+        return item.price > 50;
+        })
+        
+        //Sort filtered data > ascending order
+        const sortedData = filteredData.sort((a,b) => {
+        return b.price - a.price;
+        })
+        
+        //Find an item in sorted list
+        const uniqueItem = sortedData.find(item => {
+        return item.title.includes('2TB');
+        })
+        console.log(`uniqueItem`, uniqueItem)
+        
+        //Total of all the items
+        let totalprice = 0;
+        let allItems = []
+        for(i of sortedData){
+        totalprice += i.price;
+        allItems.push(i.price)
+        }
+        $('#totalprice').text(totalprice.toFixed(2))
+        
+        //Total using reduce
+        const totalReduce = allItems.reduce((a,b) => a + b)
+        $('#totalpricereduce').text(totalReduce.toFixed(2))
+        
+        //Append filtered data
+        let html = '';
+        sortedData.forEach(elm => {
+        html += `<li>${elm.price}</li>`
+        });
+        document.getElementById('products').innerHTML = html;
+        }
+
 </code>
 </pre>
   </div>

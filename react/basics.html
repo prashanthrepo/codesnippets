@@ -1,13 +1,16 @@
 <div class="flex-container">
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>React JS</span>
-<code class="language-js">
+<code class="searchcode language-js">
 React is a JavaScript library for building user interfaces. 
-React is used to build SPA single page applications.
-React creates a VIRTUAL DOM in memory instead of Real DOM. 
-React only changes what needs to be changed!
+React uses virtual DOM to render the view.
+Each time the data changes, a new virtual DOM gets created.
+SEO friendly
+Reusable components
+JSX - It allows us to write HTML inside JavaScript and place 
+them in the DOM without using functions like createElement( )
 Install - npx create-react-app myfirstreact | 
 cd myfirstreact | npm start
 
@@ -36,10 +39,10 @@ componentWillUnmount()
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Dynamic Value - inside a template</span>
-<code class="language-js">
+<code class="searchcode language-js">
 Components are like functions that return HTML elements.
 Classes are a template for creating objects. They encapsulate data with code to work on that data.
 import React from 'react';
@@ -70,28 +73,35 @@ ReactDOM.render(
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>React</span>
-<code class="language-js">
+<code class="searchcode language-js">
 callback function as an argument of setState()
 Since setState() is asynchronous the callback function is used for any post action.
+
 React.createElement()- const title = React.createElement('h1', {}, 'My First React Code');
-higher-order component (HOC) is a function that takes a component and returns a new component. const EnhancedComponent =
-higherOrderComponent(WrappedComponent)
-Reconciliation - When a component's props or state change, React decides whether an actual DOM update is necessary by
-comparing the newly returned element with the previously rendered one. When they are not equal, React will update the
+
+higher-order component (HOC) is a function that takes a component and returns a new component. 
+const EnhancedComponent = higherOrderComponent(WrappedComponent)
+
+Reconciliation - When a component's props or state change, 
+React decides whether an actual DOM update is necessary by
+comparing the newly returned element with the previously rendered one. 
+When they are not equal, React will update the
 DOM. This process is called reconciliation.
-Synthetic events combine the response of different browser's native events into one API, ensuring that the events are
+
+Synthetic events combine the response of different browser's native events 
+into one API, ensuring that the events are
 consistent across different browsers.
 </code>
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Axios get and post</span>
-<code class="language-js">
+<code class="searchcode language-js">
 componentDidMount() { 
   axios.get(`https://jsonplaceholder.typicode.com/users`)
   .then(res => {
@@ -109,10 +119,10 @@ const user = { name: this.state.name};
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Dynamic Value - inside a template</span>
-<code class="language-js">
+<code class="searchcode language-js">
 function App() {
 const title = "New title"
 return ( 
@@ -127,10 +137,39 @@ export default App;
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
-<span>Stateless Function Component</span>
-<code class="language-js">
+<span>getDerivedStateFromProps</span>
+<code class="searchcode language-js">
+It enables a component to update its internal state
+as the result of changes in props.
+
+state = {
+  cachedSomeProp: null
+  // ... rest of initial state
+};
+static getDerivedStateFromProps(nextProps, prevState) {
+  // do things with nextProps.someProp and prevState.cachedSomeProp
+  return {
+  cachedSomeProp: nextProps.someProp,
+  // ... other derived state properties
+};}
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Stateless Functional Component</span>
+<code class="searchcode language-js">
+Functional components are basic JavaScript functions. 
+These are typically arrow functions 
+but can also be created with
+the regular function keyword.
+Sometimes referred to as “dumb” or “stateless” components 
+as they simply accept data and display them in some form; that
+is they are mainly responsible for rendering UI.
+
 import React from 'react'
 const App = () => {
     return (
@@ -140,10 +179,10 @@ export default App
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Event Handlers</span>
-<code class="language-js">
+<code class="searchcode language-js">
 function app() {
   handleClick = () => {
     console.log("object");
@@ -159,10 +198,10 @@ function app() {
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Lists</span>
-<code class="language-js">
+<code class="searchcode language-js">
 render() {
 const data =[{"name":"test1"},{"name":"test2"}];
 const listItems = data.map((d) =>
@@ -173,10 +212,10 @@ return ( &lt;div&gt; {listItems } &lt;/div&gt; ); }
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Props - pass data from parent to child</span>
-<code class="language-js">
+<code class="searchcode language-js">
     handleClick = () => console.log()
 &lt;blogs data={blogsdata} title={'All blogs'} 
 handleclick={handleClick}/&gt;
@@ -198,10 +237,10 @@ export default Blogs
   </div>
 
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Conditional Templates</span>
-<code class="language-js">
+<code class="searchcode language-js">
 //Runs only when first condition is true
 {Blogs && &lt;Blogs data={data}&gt;}
 {isPending ? &lt;p&gt;yes&lt;/p&gt; : &lt;p&gt;no&lt;/p&gt;}
@@ -209,10 +248,10 @@ export default Blogs
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>Error Handling</span>
-<code class="language-js">
+<code class="searchcode language-js">
 useEffect(() => {
     fetch('localhost/users').then(res => {
       if(!res.ok){
@@ -231,10 +270,10 @@ useEffect(() => {
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
 <span>React Router</span>
-<code class="language-js">
+<code class="searchcode language-js">
 import { BrowserRouter as Router, Route, 
 Switch, NavLink, Link } from 'react-router-dom'
 //Switch shows only one component at once.
@@ -249,6 +288,123 @@ Switch, NavLink, Link } from 'react-router-dom'
     &lt;/Switch&gt;
   &lt;/div&gt;
 &lt;/Router&gt;
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>React Error Boundary</span>
+<code class="searchcode language-js">
+The ErrorBoundary component is the main component 
+available in react-error-boundary. 
+It allows us to implement the
+typical React error boundary with less code.
+
+function App(){
+return (
+&lt;ErrorBoundary FallbackComponent={OurFallbackComponent}&gt;
+  &lt;ComponentThatMightThrowAnError /&gt;
+&lt;/ErrorBoundary&gt;
+);
+}
+const OurFallbackComponent = 
+({ error, componentStack, resetErrorBoundary }) => {
+return (
+&lt;div&gt;
+  &lt;h1&gt;An error occurred: {error.message}&lt;/h1&gt;
+  &lt;button onClick={resetErrorBoundary}&gt;Try again&lt;/button&gt;
+&lt;/div&gt;
+);
+};
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Otehrs</span>
+<code class="searchcode language-js">
+controlled and uncontrolled components -
+different approaches to handling input form elements in react.
+Controlled component - In a controlled component, 
+the value of the input element is controlled by React.
+Uncontrolled component - In an uncontrolled component,
+the value of the input element is handled by the DOM itself.
+
+Prevent re-renders in React?
+Re-rendering of a component and it’s child components 
+occur when props or state of the component has been changed.
+
+prevent the re-rendering of child component, 
+we use the shouldComponentUpdate( )
+shouldComponentUpdate() {
+  console.log("Does not get rendered");
+  return false;
+}
+
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>React styles component</span>
+<code class="searchcode language-js">
+Inline Styling
+can directly style an element using inline style attributes.
+&lt;h3 style={{ color: "Yellow" }}&gt;This is a heading&lt;/h3&gt;
+
+Using JavaScript object
+headingStyles = {
+color: "blue",
+fontSize: "48px"
+};
+&lt;h3 style={this.headingStyles}&gt;This is a heading&lt;/h3&gt;
+
+CSS Stylesheet
+import './RandomComponent.css';
+&lt;h3 className="heading"&gt;This is a heading&lt;/h3&gt;
+
+CSS Modules
+.paragraph{
+color:"red";
+border:1px solid black;
+}
+import styles from './styles.module.css';
+&lt;p className={styles.paragraph}&gt;This is a paragraph&lt;/p&gt;
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Optimize React app performance</span>
+<code class="searchcode language-js">
+Using React.PureComponent -
+It is a base component class that checks state and props 
+of a component to know whether the component should be updated.
+
+Lazy Loading -
+It is a technique used to reduce the load time of a React app. 
+Lazy loading helps reduce the risk of web app
+performances to minimal.
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Keys in React</span>
+<code class="searchcode language-js">
+const ids = [1,2,3,4,5];
+const listElements = ids.map((id)=>{
+return(
+&lt;li key={id.toString()}&gt;
+  {id}
+&lt;/li&gt;
+)
+})
 </code>
 </pre>
   </div>

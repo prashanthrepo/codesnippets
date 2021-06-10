@@ -1,9 +1,28 @@
 <div class="flex-container">
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
-<span>useState - reactive values (any datatype),</span>
-<code class="language-js">
+<span>Hooks</span>
+<code class="searchcode language-js">
+React Hooks are in-built methods that allow developers to 
+use state and lifecycle methods inside functional components
+(basic and stateless functions). - Improved code reuse.
+Why Hooks
+Reusing stateful logic between components is difficult.
+When components become larger and carry out many operations, 
+it becomes difficult to understand in the long run.
+Hooks Rules
+Hooks should not be used inside loops, conditions, or nested functions;
+Hooks should be used inside React Functions.
+
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>useState Hook - reactive values (any datatype),</span>
+<code class="searchcode language-js">
 // State for the component
 import React, { useState } from "react";
 function app() {
@@ -24,10 +43,10 @@ export default app;
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
-<span>useEffect - runs on every render.</span>
-<code class="language-js">
+<span>useEffect Hook- runs on every render.</span>
+<code class="searchcode language-js">
 //useEffect runs on every render.
 //Just like component did mount.
 
@@ -47,10 +66,10 @@ useEffect(() => {
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
-<span>useRef</span>
-<code class="language-js">
+<span>useRef Hook</span>
+<code class="searchcode language-js">
 //useRef he useRef Hook allows us to create 
 //mutable variables in functional components.
 
@@ -72,10 +91,10 @@ function TextInputWithFocusButton() {
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
-<span>useParam - to access attributes of an url</span>
-<code class="language-js">
+<span>useParam Hook - to access attributes of an url</span>
+<code class="searchcode language-js">
 import React, { useParams } from 'react-router-dom'
 const Blogdetails = () => {
   const { id } = useParams()
@@ -90,10 +109,10 @@ export default Blogdetails;
 </pre>
   </div>
   <!------------------------------------------------------->
-  <div class="js">
+  <div class="js codeitem">
     <pre>
-<span>useHistory - to access history</span>
-<code class="language-js">
+<span>useHistory Hook - to access history</span>
+<code class="searchcode language-js">
 import React, { useHistory } from 'react-router-dom'
 const goback = () => {
   const history = useHistory()
@@ -101,6 +120,24 @@ const goback = () => {
   history.push('/home');
 }
 export default goback;
+</code>
+</pre>
+  </div>
+  <!------------------------------------------------------->
+  <div class="js codeitem">
+    <pre>
+<span>Context API</span>
+<code class="searchcode language-js">
+Context provides a way to pass data through the 
+component tree without having to 
+pass props down manually at every level.
+
+import React from 'react';
+const UserContext = React.createContext();
+export default UserContext;
+
+import UserContext from '../context/UserContext';
+const { Consumer, Provider } = UserContext;
 </code>
 </pre>
   </div>

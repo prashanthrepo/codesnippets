@@ -1,15 +1,19 @@
 const itemList = [
   {
-    name: "Wordpress",
-    path: "/common/index.html",
-  },
-  {
     name: "Web",
     path: "/common/web.html",
   },
   {
+    name: "Wordpress",
+    path: "/common/index.html",
+  },
+  {
     name: "HTML",
     path: "/htmlcss/html.html",
+  },
+  {
+    name: "Base",
+    path: "/base.html",
     class: "active",
   },
   {
@@ -27,10 +31,6 @@ const itemList = [
   {
     name: "jQuery",
     path: "/javascript/jquery.html",
-  },
-  {
-    name: "ES6",
-    path: "/javascript/basic.html",
   },
   {
     name: "Loops",
@@ -66,16 +66,14 @@ const itemList = [
   },
   {
     name: "Context API",
-    path: "/react/redux.html",
   },
-
   {
     name: "SCSS",
     path: "/css/scss.html",
   },
   {
     name: "Webpack",
-    path: "/css/scss.html",
+    path: "/react/webpack.html",
   },
   {
     name: "Git",
@@ -83,47 +81,34 @@ const itemList = [
   },
   {
     name: "Typescript",
-    path: "/css/scss.html",
-  },
-  {
-    name: "Flexbox",
-    path: "/css/scss.html",
   },
   {
     name: "Jest",
-    path: "/css/scss.html",
   },
   {
     name: "Next JS",
-    path: "/css/scss.html",
+    path: "/javascript/nextjs.html",
   },
   {
     name: "HTTP Protocols",
-    path: "/css/scss.html",
   },
   {
     name: "Web Sockets",
-    path: "/css/scss.html",
   },
   {
     name: "Node JS",
-    path: "/css/scss.html",
   },
   {
     name: "Express JS",
-    path: "/css/scss.html",
   },
   {
     name: "Babel",
-    path: "/css/scss.html",
   },
   {
     name: "Mongo DB",
-    path: "/css/scss.html",
   },
   {
     name: "Lodash",
-    path: "/css/scss.html",
   },
   {
     name: "Tailwind CSS",
@@ -131,11 +116,9 @@ const itemList = [
   },
   {
     name: "Bootstrap",
-    path: "/css/scss.html",
   },
   {
     name: "WebComponent",
-    path: "/css/scss.html",
   },
 ];
 
